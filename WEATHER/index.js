@@ -1,6 +1,6 @@
 const weatherApi = {
-  key: "62fdff770221be1d735dfd5a9cbd479a",
-  baseUrl: "https://api.openweathermap.org/data/2.5/weather",
+  key: "3265874a2c77ae4a04bb96236a642d2f",
+  baseUrl: "https://api.openweathermap.org/data/2.5/weather?",
 };
 const searchInputBox = document.getElementById("inputbox");
 searchInputBox.addEventListener("keypress", (event) => {
@@ -12,7 +12,7 @@ searchInputBox.addEventListener("keypress", (event) => {
 
 function getWeatherReport(city) {
   fetch(
-    `${weatherApi.baseUrl}?q=${city}&appid=${weatherApi.key}& units=metric `
+     `${weatherApi.baseUrl}q=${city}&appid=${weatherApi.key}`
   )
     .then((weather) => {
       return weather.json();
